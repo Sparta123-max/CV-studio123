@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #contact {
+            background: #333;
+            color: #fff;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background: #50b3a2;
+            border: 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            color: #fff;
+        }
+        input[type="submit"]:hover {
+            background: #45a089;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: black;
+            background-color: WHITE;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: GREY;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="back" ><a href="../new.html" class="button">Back</a> </div>
+    <div class="container">
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <h1>Leave a Comment</h1>
+                    <textarea id="comment" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br><br>
+                    <a id="emailLink" href="" class="button">Send Comment via Email</a>
+                
+                </div>
+                
+                    <script>
+                        document.getElementById('emailLink').addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent the default link action
+                
+                            // Get the comment value
+                            const comment = document.getElementById('comment').value;
+                
+                            // Encode the comment to be URL-safe
+                            const encodedComment = encodeURIComponent(comment);
+                
+                            // Define the email parameters
+                            const recipient = 'example@example.com';
+                            const subject = encodeURIComponent('User Comment');
+                            const body = encodedComment;
+                
+                            // Create the mailto link
+                            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+                
+                            // Redirect to the mailto link
+                            window.location.href = mailtoLink;
+                        });
+                    </script>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

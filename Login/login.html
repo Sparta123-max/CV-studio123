@@ -1,0 +1,95 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" name="username" />
+          <label for="password">Password</label>
+          <input type="password" name="password" />
+          <input type="submit" class="login-btn" value="Login" />
+        <button id="btnGoogle">   
+            <span ></span>Login with Google
+        </button>
+        <button><a href="../New folder/register/register.html">Register</a></button>
+        </form>
+      </div>
+
+        
+
+    
+    
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB2P5IXOSxwVPz9BKka5Z_VAHwO8f_woGY",
+            authDomain: "test-7a841.firebaseapp.com",
+            projectId: "test-7a841",
+            storageBucket: "test-7a841.appspot.com",
+            messagingSenderId: "174808059664",
+            appId: "1:174808059664:web:056a7e95c67a8742041f95",
+            measurementId: "G-P214QPV3MY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="./code.js"></script>
+    
+    </form>
+    
+    
+</div>
+<script src="./login.js"></script>
+
+</body>
+</html>

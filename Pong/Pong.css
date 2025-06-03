@@ -1,0 +1,19 @@
+body {
+	text-align: center;
+}
+.back {
+    display: flex;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: WHITE;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: GREY;
+}
